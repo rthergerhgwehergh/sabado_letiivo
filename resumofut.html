@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Times</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Times de Futebol.</h1>
+    <div class="secao">
+        <h3>Flamengo</h3>
+        <div class="conteudo">
+            O Flamengo foi fundado em 17 de novembro de 1895 para as disputas de remo. 
+            A entrada da equipe no futebol aconteceu em 1912. 
+            Atualmente, o time rubro-negro é o maior vencedor da história do Campeonato Carioca, com 31 títulos.
+             Segundo diversas pesquisas, é o clube com o maior número de torcedores do País.
+        </div>
+    </div>
+    <div class="secao">
+        <h3>Cruzeiro</h3>
+        <div class="conteudo">
+            O Cruzeiro Esporte Clube nasceu através do esforço de desportistas da comunidade italiana em Belo Horizonte,
+            com o nome de Societá Sportiva Palestra Itália, em 2 de janeiro de 1921. Após mais de 100 anos de história,
+            o Clube se transformou em uma das maiores agremiações de futebol do mundo.
+        </div>
+    </div>
+    <div class="secao">
+        <h3>Atletico Mineiro</h3>
+        <div class="conteudo">
+            O Atlético-MG foi fundado em 25 de março de 1908, por 22 jovens que se reuniram no Parque Municipal, 
+            em Belo Horizonte. O time foi o vencedor da primeira edição do Campeonato Brasileiro, em 1971 - seu único título na competição. 
+            Também foi vice-campeão nacional em 1977 (invicto), 80 e 99.
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('.secao .conteudo').hide();
+            $('.secao h3').click(function() {
+                $(this).next('.conteudo').slideToggle(); //aperte no nome dos times que irá aparecer o resumo de cada um
+            });
+        });
+    </script>
+</body>
+</html>

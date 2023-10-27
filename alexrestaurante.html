@@ -1,0 +1,47 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div id="restaurant-review">
+    <h2>Avaliação do Restaurante</h2>
+    <form id="review-form">
+        <label for="restaurant-name">Nome do Restaurante:</label>
+        <input type="text" id="movie-name" required><br>
+
+        <label for="review">Comentário sobre o Restaurante:</label>
+        <textarea id="review" rows="4" required></textarea><br>
+
+        <label for="rating">Classificação:</label>
+        <select id="rating" required>
+            <option value="5">5 Estrelas</option>
+            <option value="4">4 Estrelas</option>
+            <option value="3">3 Estrelas</option>
+            <option value="2">2 Estrelas</option>
+            <option value="1">1 Estrela</option>
+        </select><br>
+
+        <button type="submit">Enviar Avaliação</button>
+    </form>
+
+    <div id="reviews">
+        <h3>Avaliações Anteriores:</h3>
+        <ul id="review-list"></ul>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#review-form").submit(function (event) {
+            event.preventDefault();
+            var movieName = $("#movie-name").val();
+            var reviewText = $("#review").val();
+            var rating = $("#rating").val();
+
+            var reviewItem = $("<li>").html("<strong>" + movieName + "</strong> (" + rating + " Estrelas): " + reviewText);
+            $("#review-list").append(reviewItem);
+
+            // Limpa o formulário
+            $("#movie-name").val("");
+            $("#review").val("");
+            $("#rating").val("5");
+        });
+    });
+</script>

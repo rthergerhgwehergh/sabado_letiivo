@@ -1,0 +1,25 @@
+<body>
+<div><h1>Lista de Carro</h1></div>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<div>
+<ul style=
+"font-size: 30px">
+<li>Estrada</li>
+<li>Caminhonete</li>
+<li>EcoSport</li>
+<li>Fusca</li>
+<li>Virtus</li>
+</ul>
+</div>
+<div>
+<button id=
+"btn">Click aqui</button>
+</div>
+<script>
+$('#btn').on("click",botao) // Ao clicar no botão a lista ficara rosa
+function botao(){
+$('li').css({'color':'pink'})
+}
+</script>
+</body>
+</html>
